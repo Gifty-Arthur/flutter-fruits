@@ -42,7 +42,58 @@ class CartPage extends StatelessWidget {
                                   ),
                                 )),
                           );
-                        }))
+                        })),
+                Padding(
+                    padding: const EdgeInsets.all(36.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      padding: EdgeInsets.all(24),
+                      child: Row(
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Total Price",
+                                style: TextStyle(color: Colors.green[100]),
+                              ),
+                              const SizedBox(height: 4),
+                              Text(
+                                '\$' + value.calculateTotal(),
+                                style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.bold),
+                              )
+                            ],
+                          ),
+
+                          //pay now button
+                          Container(
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(color: Colors.green.shade100),
+                                  borderRadius: BorderRadius.circular(12)),
+                              padding: EdgeInsets.all(12),
+                              child: Row(
+                                children: const [
+                                  Text(
+                                    "Pay Now",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  Icon(
+                                    Icons.arrow_forward_ios,
+                                    size: 16,
+                                    color: Colors.white,
+                                  )
+                                ],
+                              )),
+                        ],
+                      ),
+                    ))
               ],
             );
           },

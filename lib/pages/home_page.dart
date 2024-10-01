@@ -85,7 +85,9 @@ class HomePage extends StatelessWidget {
                         },
                       );
                     });
-              }))
+              })),
+
+              //total +price
             ],
           ),
         ));
